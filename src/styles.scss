@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Open+Sans&display=swap');
+
+$silver-pink: hsla(16, 37%, 73%, 1);
+$cultured: hsla(220, 8%, 93%, 1);
+$pale-silver: hsla(18, 22%, 80%, 1);
+$gainsboro: hsla(220, 6%, 90%, 1);
+$silver-pink-2: hsla(7, 10%, 66%, 1);
+$black : rgb(23 23 23);
+$gray : rgb(148 163 184);
+
+// Font family
+$inspiration : 'Inspiration', cursive;
+$openSans : 'Open Sans', sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $gainsboro;
+  color: $black;
+  font-family: $openSans;
+}
+
+h1,h2,a{
+  color: $black;
+}
+
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: $black;
+
+  &-primary {
+    background-color: $silver-pink;
+  }
+
+  &-secondary {
+    background-color: $pale-silver;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 1rem;
+
+  a {
+    font-family: $inspiration;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    
+    a {
+      font-family: $openSans;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  div {
+    display: flex; 
+    gap: 1rem;
+
+    
+  }
+}
+
+.jumbotron {
+  display: flex;
+  margin: 0 1rem;
+  gap: 5rem;
+
+  div {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  
+  img {
+    width: 50%;
+  }
+}
+
+.products {
+  margin: 3rem 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem;
+  }
+
+  .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    color: $gray;
+
+    img {
+      width: 100%;
+    }
+
+    &-description {
+        margin: 1.5rem;
+
+      h3 {
+        font-size: 1.25rem;
+        color: $black;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: .75rem;
+      }
+
+    }
+
+    &-action {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}
+
+.about {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &-description {
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    right: 100px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    .btn {
+      align-self: flex-end;
+    }
+  }
+}
+
+
+.contact {
+  margin: 4rem 0;
+  background-color: $silver-pink-2;
+  padding: 2rem;
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    form {
+      width: 960px;
+      display: flex;
+
+      background-color: white;
+  
+      input {
+        border: none;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 1rem;
+        outline: none;
+      }
+    }
+  }
+}
